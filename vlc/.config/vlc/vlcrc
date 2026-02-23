@@ -548,6 +548,62 @@
 # Denoise strength (0-2) (float)
 #denoise-sigma=1.000000
 
+[freetype] # Freetype2 font renderer
+
+# Font (string)
+#freetype-font=Serif Bold
+
+# Monospace Font (string)
+#freetype-monofont=Monospace
+
+# Font size in pixels (integer)
+#freetype-fontsize=0
+
+# Relative font size (integer)
+#freetype-rel-fontsize=0
+
+# Text opacity (integer)
+#freetype-opacity=255
+
+# Text default color (integer)
+#freetype-color=16777215
+
+# Force bold (boolean)
+#freetype-bold=0
+
+# Background opacity (integer)
+#freetype-background-opacity=0
+
+# Background color (integer)
+#freetype-background-color=0
+
+# Outline opacity (integer)
+#freetype-outline-opacity=255
+
+# Outline color (integer)
+#freetype-outline-color=0
+
+# Outline thickness (integer)
+#freetype-outline-thickness=4
+
+# Shadow opacity (integer)
+#freetype-shadow-opacity=128
+
+# Shadow color (integer)
+#freetype-shadow-color=0
+
+# Shadow angle (float)
+#freetype-shadow-angle=-45.000000
+
+# Shadow distance (float)
+#freetype-shadow-distance=0.060000
+
+# Use YUVP renderer (boolean)
+#freetype-yuvp=0
+
+# Text direction (integer)
+#freetype-text-direction=0
+
 [stream_out_transcode] # Transcode stream output
 
 # Video encoder (string)
@@ -1346,6 +1402,26 @@ qt-privacy-ask=0
 # When to raise the interface (integer)
 #qt-auto-raise=1
 
+[mkv] # Matroska stream demuxer
+
+# Respect ordered chapters (boolean)
+#mkv-use-ordered-chapters=1
+
+# Chapter codecs (boolean)
+#mkv-use-chapter-codec=1
+
+# Preload MKV files in the same directory (boolean)
+#mkv-preload-local-dir=1
+
+# Seek based on percent not time (boolean)
+#mkv-seek-percent=0
+
+# Dummy Elements (boolean)
+#mkv-use-dummy=0
+
+# Preload clusters (boolean)
+#mkv-preload-clusters=0
+
 [avformat] # Avformat demuxer
 
 # Format name (string)
@@ -1561,6 +1637,11 @@ qt-privacy-ask=0
 
 # Trigger button (string)
 #gestures-button=left
+
+[libass] # Subtitle renderers using libass
+
+# Additional fonts directory (string)
+#ssa-fontsdir=
 
 [avcodec] # FFmpeg audio/video decoder
 
@@ -2114,6 +2195,29 @@ subsdec-encoding=UTF-8
 # Resampling quality (integer)
 #speex-resampler-quality=4
 
+[access_output_srt] # SRT stream output
+
+# Return poll wait after timeout milliseconds (-1 = infinite) (integer)
+#poll-timeout=-1
+
+# SRT latency (ms) (integer)
+#latency=120
+
+# Password for stream encryption (string)
+#passphrase=
+
+# SRT maximum payload size (bytes) (integer)
+#payload-size=1316
+
+# SRT maximum bandwidth ceiling (bytes) (integer)
+#bandwidth-overhead-limit=25
+
+# Crypto key length in bytes (integer)
+#key-length=16
+
+#  SRT Stream ID (string)
+#streamid=
+
 [udp] # UDP stream output
 
 # Caching value (ms) (integer)
@@ -2198,6 +2302,23 @@ subsdec-encoding=UTF-8
 
 # Stream public (boolean)
 #sout-shout-public=0
+
+[access_srt] # SRT input
+
+# Return poll wait after timeout milliseconds (-1 = infinite) (integer)
+#poll-timeout=-1
+
+# SRT latency (ms) (integer)
+#latency=120
+
+# Password for stream encryption (string)
+#passphrase=
+
+# Crypto key length in bytes (integer)
+#key-length=16
+
+#  SRT Stream ID (string)
+#streamid=
 
 [avio] # libavformat AVIO access
 
@@ -2983,7 +3104,7 @@ vout=any
 #rt-offset=0
 
 # Play files randomly forever (boolean)
-#random=0
+random=1
 
 # Repeat all (boolean)
 loop=1
