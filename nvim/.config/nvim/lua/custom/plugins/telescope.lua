@@ -48,11 +48,52 @@ return {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
+        defaults = {
+          mappings = {
+            i = {
+              ['<c-enter>'] = 'to_fuzzy_refine',
+
+              ['<C-q>'] = require('telescope.actions').send_to_qflist, -- Send all items not filtered to quickfixlist (qflist)
+              ['<M-q>'] = require('telescope.actions').send_selected_to_qflist, -- Send all selected items to qflist
+
+              ['<Tab>'] = require('telescope.actions').toggle_selection, -- Toggle selection and move to next selection
+              ['<S-Tab>'] = require('telescope.actions').toggle_selection, -- Toggle selection and move to next selection
+
+              ['<C-s>'] = require('telescope.actions').select_horizontal, -- hsplit
+              ['<C-v>'] = require('telescope.actions').select_vertical, -- vsplit
+
+              ['<M-k>'] = require('telescope.actions').preview_scrolling_up, -- Scroll up in preview window
+              ['<M-j>'] = require('telescope.actions').preview_scrolling_down, -- Scroll down in preview window
+              ['<M-l>'] = require('telescope.actions').preview_scrolling_right, -- Scroll left in preview window
+              ['<M-h>'] = require('telescope.actions').preview_scrolling_left, -- Scroll right in preview window
+
+              ['<C-k>'] = require('telescope.actions').results_scrolling_up, -- Scroll up in results window
+              ['<C-j>'] = require('telescope.actions').results_scrolling_down, -- Scroll down in results window
+              ['<C-l>'] = require('telescope.actions').results_scrolling_right, -- Scroll right in results window
+              ['<c-h>'] = require('telescope.actions').results_scrolling_left, -- Scroll left in results window
+            },
+            n = {
+              ['<C-q>'] = require('telescope.actions').send_to_qflist, -- Send all items not filtered to quickfixlist (qflist)
+              ['<M-q>'] = require('telescope.actions').send_selected_to_qflist, -- Send all selected items to qflist
+
+              ['<Tab>'] = require('telescope.actions').toggle_selection, -- Toggle selection and move to next selection
+              ['<S-Tab>'] = require('telescope.actions').toggle_selection, -- Toggle selection and move to next selection
+
+              ['<C-s>'] = require('telescope.actions').select_horizontal, -- hsplit
+              ['<C-v>'] = require('telescope.actions').select_vertical, -- vsplit
+
+              ['<M-k>'] = require('telescope.actions').preview_scrolling_up, -- Scroll up in preview window
+              ['<M-j>'] = require('telescope.actions').preview_scrolling_down, -- Scroll down in preview window
+              ['<M-l>'] = require('telescope.actions').preview_scrolling_right, -- Scroll left in preview window
+              ['<M-h>'] = require('telescope.actions').preview_scrolling_left, -- Scroll right in preview window
+
+              ['<C-k>'] = require('telescope.actions').results_scrolling_up, -- Scroll up in results window
+              ['<C-j>'] = require('telescope.actions').results_scrolling_down, -- Scroll down in results window
+              ['<C-l>'] = require('telescope.actions').results_scrolling_right, -- Scroll right in results window
+              ['<c-h>'] = require('telescope.actions').results_scrolling_left, -- Scroll left in results window
+            },
+          },
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
