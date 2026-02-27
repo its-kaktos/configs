@@ -183,6 +183,7 @@ return {
             },
           },
         },
+        jsonls = {},
         -- clangd = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -205,7 +206,17 @@ return {
                 callSnippet = 'Replace',
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              diagnostics = {
+                globals = { 'vim' },
+                -- disable = { 'missing-fields' },
+              },
+              workspace = {
+                library = vim.api.nvim_get_runtime_file('', true),
+                checkThirdParty = false,
+              },
+              telemetry = {
+                enable = false,
+              },
             },
           },
         },

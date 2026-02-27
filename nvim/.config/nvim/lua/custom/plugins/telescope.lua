@@ -49,6 +49,19 @@ return {
         --  All the info you're looking for is in `:help telescope.setup()`
         --
         defaults = {
+          layout_strategy = 'vertical',
+          layout_config = {
+            vertical = {
+              prompt_position = 'top', -- prompt at top
+              preview_height = 0.6, -- preview takes 50% of height
+              results_height = 0.4, -- results take remaining space
+              mirror = true,
+            },
+            width = 0.9,
+            height = 0.9,
+          },
+          sorting_strategy = 'ascending', -- makes results grow downward
+          path_display = { 'filename_first' },
           mappings = {
             i = {
               ['<c-enter>'] = 'to_fuzzy_refine',

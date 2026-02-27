@@ -64,3 +64,12 @@ vim.o.confirm = true
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
+
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.backup = false
+vim.opt.showcmd = true
+vim.opt.backspace = { 'start', 'eol', 'indent' }
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitkeep = 'cursor'

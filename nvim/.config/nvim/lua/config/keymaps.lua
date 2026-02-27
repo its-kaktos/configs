@@ -9,8 +9,8 @@ vim.keymap.set({ 'n', 'v' }, '<leader>d', '"_d', {
 vim.keymap.set('n', 'x', '"_x', { desc = 'Delete character without copying' })
 
 -- Window resizing
-vim.keymap.set('n', '-', '<C-w>-', { desc = 'Decrease window height' })
-vim.keymap.set('n', '+', '<C-w>+', { desc = 'Increase window height' })
+vim.keymap.set('n', '<M-j>', '<C-w>-', { desc = 'Decrease window height' })
+vim.keymap.set('n', '<M-k>', '<C-w>+', { desc = 'Increase window height' })
 vim.keymap.set('n', '<M-l>', '<Cmd>vertical resize +5<CR>', { desc = 'Increase window width' })
 vim.keymap.set('n', '<M-h>', '<Cmd>vertical resize -5<CR>', { desc = 'Decrease window width' })
 
@@ -60,3 +60,7 @@ end, { desc = 'Open [t]erminal small window and change [d]irectory to buffer dir
 -- Comment
 vim.keymap.set('n', '<g-c>', '<Plug>(comment_toggle_line)', { desc = 'Toggle comment line' })
 vim.keymap.set('v', '<g-c>', '<Plug>(comment_toggle_linewise_visual)', { desc = 'Toggle comment selection' })
+
+-- Split window
+vim.keymap.set('n', '<c-s>', ':split<Return>', { desc = 'Create split window' })
+vim.keymap.set('n', '<c-v>', ':vsplit<Return>', { desc = 'Create split window' })
