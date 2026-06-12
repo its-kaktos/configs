@@ -62,5 +62,5 @@ vim.keymap.set('n', '<g-c>', '<Plug>(comment_toggle_line)', { desc = 'Toggle com
 vim.keymap.set('v', '<g-c>', '<Plug>(comment_toggle_linewise_visual)', { desc = 'Toggle comment selection' })
 
 -- Split window
-vim.keymap.set('n', '<c-s>', ':split<Return>', { desc = 'Create split window' })
-vim.keymap.set('n', '<c-v>', ':vsplit<Return>', { desc = 'Create split window' })
+vim.keymap.set('n', 'sh', ':split<Return>', { desc = 'Create split window' })
+vim.keymap.set('n', 'sv', ':vsplit<Return>', { desc = 'Create split window' })
